@@ -41,7 +41,7 @@ do {
 
 
 enum Library: String, CaseIterable {
-    case libmpv, FFmpeg, libshaderc, vulkan, lcms2, libdovi, openssl, libunibreak, libfreetype, libfribidi, libharfbuzz, libass, libsmbclient, libplacebo, libdav1d, gmp, nettle, gnutls, libuchardet, libbluray, libluajit
+    case libmpv, FFmpeg, libshaderc, vulkan, lcms2, libdovi, openssl, libunibreak, libfreetype, libfribidi, libharfbuzz, libass, libsmbclient, libplacebo, libdav1d, gmp, nettle, gnutls, libuchardet, libbluray
     var version: String {
         switch self {
         case .libmpv:
@@ -84,8 +84,8 @@ enum Library: String, CaseIterable {
             return "0.0.8"
         case .libbluray:
             return "1.3.4"
-        case .libluajit:
-            return "2.1.0"
+        //case .libluajit:
+        //    return "2.1.0"
         }
     }
 
@@ -131,8 +131,8 @@ enum Library: String, CaseIterable {
             return "https://github.com/mpvkit/libuchardet-build/releases/download/\(self.version)/libuchardet-all.zip"
         case .libbluray:
             return "https://code.videolan.org/videolan/libbluray.git"
-        case .libluajit:
-            return "https://github.com/mpvkit/libluajit-build/releases/download/\(self.version)/libluajit-all.zip"
+        //case .libluajit:
+        //    return "https://github.com/mpvkit/libluajit-build/releases/download/\(self.version)/libluajit-all.zip"
         }
     }
 
@@ -334,14 +334,14 @@ enum Library: String, CaseIterable {
                     checksum: ""
                 ),
             ]
-        case .libluajit:
+        /*case .libluajit:
             return  [
                 .target(
                     name: "Libluajit",
                     url: "https://github.com/mpvkit/libluajit-build/releases/download/\(self.version)/Libluajit.xcframework.zip",
                     checksum: "https://github.com/mpvkit/libluajit-build/releases/download/\(self.version)/Libluajit.xcframework.checksum.txt"
                 ),
-            ]
+            ]*/
         }
     }
 }
@@ -368,8 +368,8 @@ private class BuildMPV: BaseBuild {
             "-Dplain-gl=enabled",
             "-Diconv=enabled",
             "-Duchardet=enabled",
-            "-Dvulkan=enabled",
-            "-Dmoltenvk=enabled",  // from patch option
+            "-Dvulkan=disabled",
+            "-Dmoltenvk=disabled",  // from patch option
 
             "-Djavascript=disabled",
             "-Dzimg=disabled",
@@ -819,11 +819,11 @@ private class BuildUchardet: ZipBaseBuild {
     }
 }
 
-private class BuildLuaJIT: ZipBaseBuild {
+/*private class BuildLuaJIT: ZipBaseBuild {
     init() {
         super.init(library: .libluajit)
     }
-}
+}*/
 
 
 private class BuildPlacebo: ZipBaseBuild {
