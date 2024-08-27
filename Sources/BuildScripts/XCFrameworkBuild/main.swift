@@ -31,7 +31,7 @@ do {
 
     // mpv
     try BuildUchardet().buildALL()
-    try BuildLuaJIT().buildALL()
+    //try BuildLuaJIT().buildALL()
     try BuildBluray().buildALL()
     try BuildMPV().buildALL()
 } catch {
