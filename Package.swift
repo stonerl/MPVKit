@@ -20,7 +20,7 @@ let package = Package(
             name: "_MPVKit",
             dependencies: [
                 "Libmpv", "_FFmpeg", "Libuchardet", "Libbluray",
-                //.target(name: "Libluajit", condition: .when(platforms: [.macOS])),
+                .target(name: "Libluajit", condition: .when(platforms: [.macOS])),
             ],
             path: "Sources/_MPVKit",
             linkerSettings: [
@@ -57,7 +57,7 @@ let package = Package(
             name: "_MPVKit-GPL",
             dependencies: [
                 "Libmpv-GPL", "_FFmpeg-GPL", "Libuchardet", "Libbluray",
-                //.target(name: "Libluajit", condition: .when(platforms: [.macOS])),
+                .target(name: "Libluajit", condition: .when(platforms: [.macOS])),
             ],
             path: "Sources/_MPVKit-GPL",
             linkerSettings: [
@@ -93,38 +93,38 @@ let package = Package(
 
         .binaryTarget(
             name: "Libmpv-GPL",
-            url: "https://github.com/stonerl/MPVKit/releases/download/0.38.0_2/Libmpv-GPL.xcframework.zip",
-            checksum: "5c411c55255ff4506fc0d49a459268d630c371169c6ee447fcf92f9e97f3d9df"
+            url: "https://github.com/stonerl/MPVKit/releases/download/0.38.0_1/Libmpv-GPL.xcframework.zip",
+            checksum: "bc5f26a29fb5bb67fd96efc57c9f3c286ee55588b7b82291046a8eac3ed94649"
         ),
         .binaryTarget(
             name: "Libavcodec-GPL",
-            url: "https://github.com/stonerl/MPVKit/releases/download/0.38.0_2/Libavcodec-GPL.xcframework.zip",
-            checksum: "4e57d0ee237428060b57ab915577488a0ccdb092788ea29cceadca93e9a053a8"
+            url: "https://github.com/stonerl/MPVKit/releases/download/0.38.0_1/Libavcodec-GPL.xcframework.zip",
+            checksum: "e4744ca9efee3d71ec9a8eea950b8986547aca3373d79a7e749e7c17d4fd8231"
         ),
         .binaryTarget(
             name: "Libavformat-GPL",
-            url: "https://github.com/stonerl/MPVKit/releases/download/0.38.0_2/Libavformat-GPL.xcframework.zip",
-            checksum: "2d3aac0a5b03892c34e6cb7f9151b8c67060a94406e33c3ee8d548b2072370bf"
+            url: "https://github.com/stonerl/MPVKit/releases/download/0.38.0_1/Libavformat-GPL.xcframework.zip",
+            checksum: "aaeb83c9202ac86ae681cd412ee4da8fa0fc0289a5041e9ac1c9c52b77b8c3bf"
         ),
         .binaryTarget(
             name: "Libavfilter-GPL",
-            url: "https://github.com/stonerl/MPVKit/releases/download/0.38.0_2/Libavfilter-GPL.xcframework.zip",
-            checksum: "fc113e2b2b542d0e7bfc1718a991de89755473e1b15881784b97bec4cc7c2eed"
+            url: "https://github.com/stonerl/MPVKit/releases/download/0.38.0_1/Libavfilter-GPL.xcframework.zip",
+            checksum: "59f8ffc980564440cb6af55ea0b9c6005d8bbf5e2c8e4ceb9b949d19bb826085"
         ),
         .binaryTarget(
             name: "Libavutil-GPL",
-            url: "https://github.com/stonerl/MPVKit/releases/download/0.38.0_2/Libavutil-GPL.xcframework.zip",
-            checksum: "3f0ea956271afcba4e22defa62644a14e331b5885ad30bf412a5375243c41562"
+            url: "https://github.com/stonerl/MPVKit/releases/download/0.38.0_1/Libavutil-GPL.xcframework.zip",
+            checksum: "5328fe78c9f4948b33470382a0dd980a5d4d43042d838d50760eabdc31233588"
         ),
         .binaryTarget(
             name: "Libswresample-GPL",
-            url: "https://github.com/stonerl/MPVKit/releases/download/0.38.0_2/Libswresample-GPL.xcframework.zip",
-            checksum: "bd559ffee8801d81ffa56ec13b5af81a17c5b41cb07ced61baea8926d390735b"
+            url: "https://github.com/stonerl/MPVKit/releases/download/0.38.0_1/Libswresample-GPL.xcframework.zip",
+            checksum: "0fbc9e102b1d2130e78c7737a57386c7c70f257a73d678b663a56cc22e0dc6b0"
         ),
         .binaryTarget(
             name: "Libswscale-GPL",
-            url: "https://github.com/stonerl/MPVKit/releases/download/0.38.0_2/Libswscale-GPL.xcframework.zip",
-            checksum: "55ce4874f996ce804c2f8ad850f3bb633825f8ebaf93fa08a8b2f988a23a9112"
+            url: "https://github.com/stonerl/MPVKit/releases/download/0.38.0_1/Libswscale-GPL.xcframework.zip",
+            checksum: "03aec4e5d84824b0b03fd63636f597d9ca12b01a78b499e15ef399ada05aea32"
         ),
         //AUTO_GENERATE_TARGETS_BEGIN//
 
@@ -236,33 +236,33 @@ let package = Package(
 
         .binaryTarget(
             name: "Libavcodec",
-            url: "https://github.com/stonerl/MPVKit/releases/download/0.38.0_2/Libavcodec.xcframework.zip",
-            checksum: "477a8a2ab2bb39cfbd57ac297f796d2771b6e72b98b7b6d078b99bff3647c4aa"
+            url: "https://github.com/stonerl/MPVKit/releases/download/0.38.0_1/Libavcodec.xcframework.zip",
+            checksum: "fafe046e327df77a1e53588e52c7a33b8897537ebb1aeebeff3016266367868c"
         ),
         .binaryTarget(
             name: "Libavformat",
-            url: "https://github.com/stonerl/MPVKit/releases/download/0.38.0_2/Libavformat.xcframework.zip",
-            checksum: "cadd4d62ef7cd3d7a59373554584ae2f25e63ba35fee6e2f89813010d68db7a0"
+            url: "https://github.com/stonerl/MPVKit/releases/download/0.38.0_1/Libavformat.xcframework.zip",
+            checksum: "99dd4608bec8ffc7f914ba2b05eae4ba64b9459f26226845a0e01366f644be61"
         ),
         .binaryTarget(
             name: "Libavfilter",
-            url: "https://github.com/stonerl/MPVKit/releases/download/0.38.0_2/Libavfilter.xcframework.zip",
-            checksum: "343d6223ef0853e2fc0424c577d0d8bf8ca5b59330f0ab70ab4f97185701ae9a"
+            url: "https://github.com/stonerl/MPVKit/releases/download/0.38.0_1/Libavfilter.xcframework.zip",
+            checksum: "8e095a0fdc23b550548cc525b456f989fb65d7343d892c6f8d58048b11e449d8"
         ),
         .binaryTarget(
             name: "Libavutil",
-            url: "https://github.com/stonerl/MPVKit/releases/download/0.38.0_2/Libavutil.xcframework.zip",
-            checksum: "017d034f75b67cc1769b9482b4bf1d385a8044a2349e2d079a38fdc54392eb98"
+            url: "https://github.com/stonerl/MPVKit/releases/download/0.38.0_1/Libavutil.xcframework.zip",
+            checksum: "712221f0d5e1ce1c499db07ee394ed98015bb553e54f69ee1b92616a47f8e606"
         ),
         .binaryTarget(
             name: "Libswresample",
-            url: "https://github.com/stonerl/MPVKit/releases/download/0.38.0_2/Libswresample.xcframework.zip",
-            checksum: "e82fe3b31e78a7e0b7c8ba6004b5071d207aad0bd6878ac79a6e5df55f30ec6e"
+            url: "https://github.com/stonerl/MPVKit/releases/download/0.38.0_1/Libswresample.xcframework.zip",
+            checksum: "ab0ade927c9968dba5c59a727afba5fbc3ab4afe1ca302b3988ee2c5908e7639"
         ),
         .binaryTarget(
             name: "Libswscale",
-            url: "https://github.com/stonerl/MPVKit/releases/download/0.38.0_2/Libswscale.xcframework.zip",
-            checksum: "9304604967c5706d83042beabb7cef91807f612739d0ed910e7b36a3e295afe8"
+            url: "https://github.com/stonerl/MPVKit/releases/download/0.38.0_1/Libswscale.xcframework.zip",
+            checksum: "62c903d330523c62f05bc497abccdc4ee34459a0762d7ac0febd9b180c088253"
         ),
 
         .binaryTarget(
@@ -271,22 +271,16 @@ let package = Package(
             checksum: "80b14d8080c2531ced6d6b234a826c13f0be459a8c751815f68e0eefd34afa30"
         ),
 
-        /*.binaryTarget(
-            name: "Libluajit",
-            url: "https://github.com/mpvkit/libluajit-build/releases/download/2.1.0/Libluajit.xcframework.zip",
-            checksum: "3765d7c6392b4f9a945b334ed593747b8adb9345078717ecfb6d7d12114a0f9e"
-        ),*/
-
         .binaryTarget(
             name: "Libbluray",
-            url: "https://github.com/stonerl/MPVKit/releases/download/0.38.0_2/Libbluray.xcframework.zip",
-            checksum: "cbea1f0839206e62af5f173d9b4b1eaac901dc2d3c68fb0ce7c0da919c3f5b44"
+            url: "https://github.com/stonerl/MPVKit/releases/download/0.38.0_1/Libbluray.xcframework.zip",
+            checksum: "252b2c23f9b8751fff2a21d93e3569433082364bfbce8ab8f41d728353f4af6f"
         ),
 
         .binaryTarget(
             name: "Libmpv",
-            url: "https://github.com/stonerl/MPVKit/releases/download/0.38.0_2/Libmpv.xcframework.zip",
-            checksum: "961f3b58d9e3f62c0ab3ef60a9a5917a054454b0c907a64d76b4adab3b241364"
+            url: "https://github.com/stonerl/MPVKit/releases/download/0.38.0_1/Libmpv.xcframework.zip",
+            checksum: "315be0d01f041b39078ad9f11bb65df09f9c8664899c35951aa29eba53e4c3e1"
         ),
         //AUTO_GENERATE_TARGETS_END//
     ]
